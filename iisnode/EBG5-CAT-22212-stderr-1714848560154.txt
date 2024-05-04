@@ -1,0 +1,1 @@
+Error: ENOENT: no such file or directory, stat 'C:\Progetti\_other\mtfbs-loga-test\test-loga-2\build\index.html'
