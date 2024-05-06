@@ -5,27 +5,27 @@ const JobOverView = ({ job }) => {
         <li>
           <i className="icon icon-reference"></i>
           <h5>Reference number:</h5>
-          <span>{job.referenceNumber}</span>
+          <span>{job?.referenceNumber}</span>
         </li>
         <li>
           <i className="icon icon-calendar"></i>
           <h5>Date Posted:</h5>
-          <span>{job.publishFromDate}</span>
+          <span>{job?.publishFromDate}</span>
         </li>
         <li>
           <i className="icon icon-expiry"></i>
           <h5>Expiration date:</h5>
-          <span>{job.publishToDate}</span>
+          <span>{job?.publishToDate}</span>
         </li>
         <li>
           <i className="icon icon-location"></i>
           <h5>Location:</h5>
-          <span>{job.location}</span>
+          <span>{job?.location}</span>
         </li>
         <li>
           <i className="icon icon-user-2"></i>
           <h5>Job Title:</h5>
-          <span>{job.title}</span>
+          <span>{job?.title}</span>
         </li>
         <li>
           <i className="icon icon-clock"></i>

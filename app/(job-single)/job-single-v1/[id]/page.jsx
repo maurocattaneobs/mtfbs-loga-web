@@ -1,20 +1,31 @@
-import React from "react";
-import LoginPopup from "@/components/common/form/login/LoginPopup";
-import FooterDefault from "@/components/footer/common-footer";
-import DefaulHeader from "@/components/header/DefaulHeader";
-import JobOverView from "@/components/job-single-pages/job-overview/JobOverView";
-import JobSkills from "@/components/job-single-pages/shared-components/JobSkills";
-import JobDetailsDescriptions from "@/components/job-single-pages/shared-components/JobDetailsDescriptions";
-import ApplyJobModalContent from "@/components/job-single-pages/shared-components/ApplyJobModalContent";
-import Image from "next/image";
-import { fetchJobs } from "@/services/api";
+"use client";
 
-export default async function DetailPage({ params }) {
+import { React, useState, useEffect } from "react";
+import LoginPopup from "../../../../components/common/form/login/LoginPopup";
+import FooterDefault from "../../../../components/footer/common-footer";
+import DefaulHeader from "../../../../components/header/DefaulHeader";
+import JobOverView from "../../../../components/job-single-pages/job-overview/JobOverView";
+import JobSkills from "../../../../components/job-single-pages/shared-components/JobSkills";
+import JobDetailsDescriptions from "../../../../components/job-single-pages/shared-components/JobDetailsDescriptions";
+import ApplyJobModalContent from "../../../../components/job-single-pages/shared-components/ApplyJobModalContent";
+import Image from "next/image";
+
+export default function DetailPage({ params }) {
   const id = params.id;
 
-  const jobs = await fetchJobs();
+  const [job, setJob] = useState(undefined);
 
-  const job = jobs.find((item) => item.id == id) || jobs[0];
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`/api/jobs/${id}`, {
+        method: "GET",
+      });
+      const data = await response?.json();
+      setJob(data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
