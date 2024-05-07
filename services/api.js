@@ -3,7 +3,9 @@ import appConfig from "./config";
 const cheerio = require("cheerio");
 
 export async function fetchJobs() {
-  const response = await fetch(appConfig.logaUrl + `?random=${Math.random()}`, {
+  const remoteUrl = `${appConfig.logaUrl}&random=${Math.random()}`;
+
+  const response = await fetch(remoteUrl, {
     headers: {
       "Cache-Control": "no-cache",
     },
