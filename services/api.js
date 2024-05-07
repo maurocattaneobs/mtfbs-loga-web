@@ -13,6 +13,7 @@ export async function fetchJobs() {
     const referenceNumber =
       jobNode.getElementsByTagName("referenceNumber")[0]?.textContent || "";
     const title = jobNode.getElementsByTagName("title")[0]?.textContent || "";
+    const url = jobNode.getElementsByTagName("url")[0]?.textContent || "";
     const shortName =
       jobNode.getElementsByTagName("shortName")[0]?.textContent || "";
     const location =
@@ -41,6 +42,7 @@ export async function fetchJobs() {
       id,
       referenceNumber,
       title,
+      url,
       shortName,
       location,
       mandant,

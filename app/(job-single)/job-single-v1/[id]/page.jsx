@@ -125,7 +125,7 @@ export default function DetailPage({ params }) {
                       </div>
                       {/* End modal-header */}
 
-                      <ApplyJobModalContent />
+                      <ApplyJobModalContent job={job} />
                       {/* End PrivateMessageBox */}
                     </div>
                     {/* End .send-private-message-wrapper */}
