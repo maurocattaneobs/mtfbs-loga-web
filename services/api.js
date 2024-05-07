@@ -3,7 +3,12 @@ import appConfig from "./config";
 const cheerio = require("cheerio");
 
 export async function fetchJobs() {
-  const response = await fetch(appConfig.logaUrl);
+  const response = await fetch(appConfig.logaUrl + `?random=${Math.random()}`, {
+    headers: {
+      "Cache-Control": "no-cache",
+    },
+  });
+
   const xmlData = await response.text();
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xmlData, "text/xml");
