@@ -5,7 +5,6 @@ const cheerio = require("cheerio");
 export async function fetchJobs() {
   const response = await fetch(appConfig.logaUrl);
   const xmlData = await response.text();
-
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xmlData, "text/xml");
   const jobNodes = xmlDoc.getElementsByTagName("job");
