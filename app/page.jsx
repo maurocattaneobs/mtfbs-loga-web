@@ -11,6 +11,9 @@ export default function HomePage() {
     const fetchData = async () => {
       const response = await fetch("/api/jobs", {
         method: "GET",
+        headers: {
+          "Cache-Control": "no-cache",
+        },
       });
       const data = await response?.json();
       setJobs(data);

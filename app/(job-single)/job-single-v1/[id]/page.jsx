@@ -19,6 +19,9 @@ export default function DetailPage({ params }) {
     const fetchData = async () => {
       const response = await fetch(`/api/jobs/${id}`, {
         method: "GET",
+        headers: {
+          "Cache-Control": "no-cache",
+        },
       });
       const data = await response?.json();
       setJob(data);
