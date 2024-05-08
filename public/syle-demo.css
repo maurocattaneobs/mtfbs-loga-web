@@ -517,18 +517,13 @@ label {
   background-color: #1967d2 !important;
   border-radius: 8px;
   font-weight: 400;
-  padding: 8px 35px 25px;
+  padding: 12px 35px 12px;
+  height: 53px !important;
+  margin-top: 32px;
+  width: 100%;
 }
 
 .LG-Button.primary:hover {
   color: #ffffff !important;
   background-color: #0146a6 !important;
-}
-
-.LG-Button.primary {
-  text-transform: lowercase !important;
-}
-
-.LG-Button.primary:first-letter {
-  text-transform: uppercase !important;
 }
