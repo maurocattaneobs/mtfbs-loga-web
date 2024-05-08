@@ -6,16 +6,10 @@ export async function fetchJobs() {
   const remoteUrl = `${appConfig.logaUrl}?_=${new Date().getTime()}`;
 
   const response = await fetch(remoteUrl, {
-    headers: {
-      "Cache-Control": "no-cache",
-      Pragma: "no-cache",
-    },
+    cache: "no-store",
   });
-  // test
 
   const xmlData = await response.text();
-
-  console.debug(xmlData);
 
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xmlData, "text/xml");
