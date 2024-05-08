@@ -1,5 +1,4 @@
 const { DOMParser } = require("xmldom");
-export const dynamic = "force-dynamic";
 import appConfig from "./config";
 const cheerio = require("cheerio");
 
