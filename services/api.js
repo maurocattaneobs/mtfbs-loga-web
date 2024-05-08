@@ -14,6 +14,9 @@ export async function fetchJobs() {
   // test
 
   const xmlData = await response.text();
+
+  console.debug(xmlData);
+
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xmlData, "text/xml");
   const jobNodes = xmlDoc.getElementsByTagName("job");
