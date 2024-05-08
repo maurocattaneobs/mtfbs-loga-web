@@ -1,11 +1,9 @@
 const { DOMParser } = require("xmldom");
-import { unstable_noStore as noStore } from "next/cache";
+export const dynamic = "force-dynamic";
 import appConfig from "./config";
 const cheerio = require("cheerio");
 
 export async function fetchJobs() {
-  noStore();
-
   const remoteUrl = `${appConfig.logaUrl}?_=${new Date().getTime()}`;
 
   const response = await fetch(remoteUrl);
