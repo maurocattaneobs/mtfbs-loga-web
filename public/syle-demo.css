@@ -527,3 +527,7 @@ label {
   color: #ffffff !important;
   background-color: #0146a6 !important;
 }
+
+.LG-RichTextContent {
+  display: none;
+}
