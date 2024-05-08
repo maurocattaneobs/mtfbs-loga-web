@@ -8,6 +8,7 @@ export async function fetchJobs() {
   const response = await fetch(remoteUrl, {
     headers: {
       "Cache-Control": "no-cache",
+      Pragma: "no-cache",
     },
   });
   // test
