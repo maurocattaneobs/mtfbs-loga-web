@@ -3,7 +3,7 @@ import appConfig from "./config";
 const cheerio = require("cheerio");
 
 export async function fetchJobs() {
-  const remoteUrl = `${appConfig.logaUrl}`;
+  const remoteUrl = `${appConfig.logaUrl}?_=${new Date().getTime()}`;
 
   const response = await fetch(remoteUrl, {
     headers: {
