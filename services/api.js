@@ -1,13 +1,14 @@
 const { DOMParser } = require("xmldom");
+import { unstable_noStore as noStore } from "next/cache";
 import appConfig from "./config";
 const cheerio = require("cheerio");
 
 export async function fetchJobs() {
+  noStore();
+
   const remoteUrl = `${appConfig.logaUrl}?_=${new Date().getTime()}`;
 
-  const response = await fetch(remoteUrl, {
-    cache: "no-store",
-  });
+  const response = await fetch(remoteUrl);
 
   const xmlData = await response.text();
 
