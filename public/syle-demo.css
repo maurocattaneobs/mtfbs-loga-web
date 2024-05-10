@@ -520,6 +520,7 @@ label {
   padding: 12px 35px 12px;
   height: 53px !important;
   margin-top: 32px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
@@ -530,4 +531,8 @@ label {
 
 .LG-RichTextContent {
   display: none;
+}
+
+.BW-WebPositionPage {
+  padding-bottom: 120px;
 }
