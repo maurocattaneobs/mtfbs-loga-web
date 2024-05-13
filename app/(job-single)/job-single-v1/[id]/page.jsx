@@ -5,7 +5,7 @@ import LoginPopup from "../../../../components/common/form/login/LoginPopup";
 import FooterDefault from "../../../../components/footer/common-footer";
 import DefaulHeader from "../../../../components/header/DefaulHeader";
 import JobOverView from "../../../../components/job-single-pages/job-overview/JobOverView";
-import JobSkills from "../../../../components/job-single-pages/shared-components/JobSkills";
+import JobConsultants from "../../../../components/job-single-pages/shared-components/JobConsultants";
 import JobDetailsDescriptions from "../../../../components/job-single-pages/shared-components/JobDetailsDescriptions";
 import ApplyJobModalContent from "../../../../components/job-single-pages/shared-components/ApplyJobModalContent";
 import Image from "next/image";
@@ -158,9 +158,9 @@ export default function DetailPage({ params }) {
                     <h4 className="widget-title">Job Overview</h4>
                     <JobOverView job={job} />
 
-                    <h4 className="widget-title mt-5">Job Skills</h4>
+                    <h4 className="widget-title mt-5">Referenti</h4>
                     <div className="widget-content">
-                      <JobSkills />
+                      <JobConsultants hrConsultants={job?.hrConsultantsArr} />
                     </div>
                     {/* <!-- Job Skills --> */}
                   </div>

@@ -8,6 +8,11 @@ const JobOverView = ({ job }) => {
           <span>{job?.referenceNumber}</span>
         </li>
         <li>
+          <i className="icon icon-briefcase"></i>
+          <h5>Posizione:</h5>
+          <span>{job?.shortName}</span>
+        </li>
+        <li>
           <i className="icon icon-calendar"></i>
           <h5>Date Posted:</h5>
           <span>{job?.publishFromDate}</span>
@@ -35,12 +40,12 @@ const JobOverView = ({ job }) => {
         <li>
           <i className="icon icon-rate"></i>
           <h5>Rate:</h5>
-          <span>CHF 15 - 25 / hour</span>
+          <span>CHF 35 - 40 / hour</span>
         </li>
         <li>
           <i className="icon icon-salary"></i>
           <h5>Salary:</h5>
-          <span>CHF 35k - 45k</span>
+          <span>CHF 70k - 80k</span>
         </li>
       </ul>
     </div>
