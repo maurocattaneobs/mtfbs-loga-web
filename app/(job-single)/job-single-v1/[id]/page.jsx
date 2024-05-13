@@ -100,7 +100,7 @@ export default function DetailPage({ params }) {
                     data-bs-toggle="modal"
                     data-bs-target="#applyJobModal"
                   >
-                    Apply For Job
+                    Invia candidatura
                   </a>
                   <button className="bookmark-btn">
                     <i className="flaticon-bookmark"></i>
@@ -155,7 +155,7 @@ export default function DetailPage({ params }) {
                 <aside className="sidebar">
                   <div className="sidebar-widget">
                     {/* <!-- Job Overview --> */}
-                    <h4 className="widget-title">Job Overview</h4>
+                    <h4 className="widget-title">Dettagli posizione</h4>
                     <JobOverView job={job} />
 
                     <h4 className="widget-title mt-5">Referenti</h4>

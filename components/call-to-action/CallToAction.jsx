@@ -9,12 +9,12 @@ const CallToAction = () => {
             <div className="sec-title">
               <h2>Recruiting?</h2>
               <div className="text">
-                Advertise your jobs to millions of monthly users and search 15.8
-                million
-                <br /> CVs in our database.
+                Pubblicizza le tue offerte di lavoro a milioni di utenti mensili
+                e cerca 15,8 milioni
+                <br /> di CV nel nostro database.
               </div>
               <a href="#" className="theme-btn btn-style-one bg-blue">
-                <span className="btn-title">Start Recruiting Now</span>
+                <span className="btn-title">Inizia subito</span>
               </a>
             </div>
           </div>

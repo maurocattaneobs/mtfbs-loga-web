@@ -14,17 +14,6 @@ const LoginPopup = () => {
             ></button>
             {/* End close modal btn */}
 
-            <div className="modal-body">
-              {/* <!-- Login modal --> */}
-              <div id="login-modal">
-                {/* <!-- Login Form --> */}
-                <div className="login-form default-form">
-                  <FormContent />
-                </div>
-                {/* <!--End Login Form --> */}
-              </div>
-              {/* <!-- End Login Module --> */}
-            </div>
             {/* En modal-body */}
           </div>
           {/* End modal-content */}

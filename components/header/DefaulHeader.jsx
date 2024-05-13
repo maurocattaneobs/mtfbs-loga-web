@@ -59,10 +59,10 @@ const DefaulHeader = () => {
               data-bs-toggle="modal"
               data-bs-target="#loginPopupModal"
             >
-              Login / Register
+              Accedi / Registrati
             </a>
             <Link href="#" className="theme-btn btn-style-one">
-              Job Post
+              Invia CV
             </Link>
           </div>
         </div>

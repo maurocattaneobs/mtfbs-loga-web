@@ -6,15 +6,15 @@ const CopyrightFooter = () => {
       <div className="auto-container">
         <div className="outer-box">
           <div className="copyright-text">
-            © {new Date().getFullYear()} Demo Loga web portal by{" "}
+            © {new Date().getFullYear()} Demo Loga by{" "}
             <a
               href="https://mtfbs.com/soluzioni/gestione-risorse-umane"
               target="_blank"
               rel="noopener noreferrer"
             >
-              mtfbs/dev
+              mtfbs
             </a>
-            . All Right Reserved.
+            . Tutti i diritti riservati.
           </div>
           <div className="social-links">
             <Social />

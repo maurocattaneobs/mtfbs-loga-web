@@ -17,7 +17,7 @@ function index({ jobs }) {
       <DefaulHeader />
       {/* End Header with upload cv btn */}
 
-      <Breadcrumb title="Find Jobs" meta="Jobs" />
+      <Breadcrumb title="Elenco posizioni aperte" meta="posizioni aperte" />
       {/* <!--End Breadcrumb Start--> */}
 
       <section className="ls-section">
