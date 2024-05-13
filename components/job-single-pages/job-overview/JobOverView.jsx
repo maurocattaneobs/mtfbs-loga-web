@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 const JobOverView = ({ job }) => {
   return (
     <div className="widget-content">
@@ -15,12 +17,16 @@ const JobOverView = ({ job }) => {
         <li>
           <i className="icon icon-calendar"></i>
           <h5>Data pubblicazione:</h5>
-          <span>{job?.publishFromDate}</span>
+          <span>
+            {job ? format(new Date(job.publishFromDate), "dd.MM.yyyy") : "-"}
+          </span>
         </li>
         <li>
           <i className="icon icon-expiry"></i>
           <h5>Validità:</h5>
-          <span>{job?.publishToDate}</span>
+          <span>
+            {job ? format(new Date(job.publishToDate), "dd.MM.yyyy") : "-"}
+          </span>
         </li>
         <li>
           <i className="icon icon-location"></i>
