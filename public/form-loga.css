@@ -1,0 +1,16 @@
+.LG-Button.primary {background-color:#bf0831 !important; border: 1px solid #bf0831; border-radius:30px; font-family: Verdana,Geneva,sans-serif; letter-spacing: 0}
+.LG-Button.primary:hover {background-color:#ed3042 !important;}
+label {font-weight: bold !important; color: #333 !important; font-size: 13px !important; font-family: Verdana,Geneva,sans-serif !important;}
+.DynaCss-AAA72-FIRMA-ID .LG-InputLabel .requiredSuffix, label .requiredSuffix {color:#bf0831}
+.DynaCss-100-FIRMA-ID .LG-InputLabel .requiredSuffix, label .requiredSuffix {color:#bf0831}
+input, .LG-FileController {background-color: #fff !important; border: 1px solid #d4d4d4 !important; margin-bottom:6px !important}
+.LG-FileController-Edit {background-color: #fff !important; border-color:transparent !important;}
+.LG-FileController-MainPanel {margin-top:-13px}
+
+.LG-RichTextContent {
+  display: none;
+}
+
+.BW-WebPositionPage {
+  padding-bottom: 120px;
+}
