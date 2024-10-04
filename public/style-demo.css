@@ -471,6 +471,8 @@ button {
   line-height: 20px !important;
 }
 
+/* MTFBS 03102024 */
+/* colore sfondo campi input dati per candidarsi (Nome, Cognome, ecc...) */
 input,
 .LG-FileController {
   font-family: Jost, sans-serif !important;
@@ -480,15 +482,15 @@ input,
   width: 100% !important;
   display: block !important;
   color: dimgray !important;
-  background-color: #f0f5f7 !important;
-  border: 1px solid #f0f5f7 !important;
+  background-color: #ebf0f2 !important;
+  border: 1px solid #ebf0f2 !important;
   box-sizing: border-box !important;
   border-radius: 8px !important;
   transition: all 0.3s ease;
 }
 
 input:focus {
-  border-color: #1967d2 !important;
+  border-color: #2271b3 !important;
   background-color: #fff !important;
 }
 
@@ -496,11 +498,13 @@ input:focus {
   background-position: 98% 4px !important;
 }
 
+/* MTFBS 03102024 */
+/* colore testo campi input dati per candidarsi (Nome, Cognome, ecc...) */
 label {
   font-weight: 500 !important;
   font-size: 16px !important;
   line-height: 22px !important;
-  color: #202124 !important;
+  color: #2271b3 !important;
   font-family: Jost, sans-serif !important;
   font-style: normal;
 }
@@ -514,7 +518,7 @@ label {
   text-align: center;
   white-space: nowrap;
   color: #ffffff !important;
-  background-color: #1967d2 !important;
+  background-color: #2271b3 !important;
   border-radius: 8px;
   font-weight: 400;
   padding: 12px 35px 12px;
@@ -526,7 +530,7 @@ label {
 
 .LG-Button.primary:hover {
   color: #ffffff !important;
-  background-color: #0146a6 !important;
+  background-color: #2271b3 !important;
 }
 
 .LG-RichTextContent {
@@ -535,4 +539,268 @@ label {
 
 .BW-WebPositionPage {
   padding-bottom: 110px;
+}
+
+
+/* aggiunta classi non trovate sopra */
+
+/* MTFBS 03102024 */
+/* colore sfondo sidebar sinistra */
+.LGAppToolbar .MainContainer {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icone sidebar sinistra selezionate */
+.LGAppToolbarAbstractIcon.Selected {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icone sidebar sinistra NON selezionate */
+.LGAppToolbarAbstractIcon {
+	color: #ffffff;
+}
+
+/* MTFBS 03102024 */
+/* colore icone sidebar sinistra hover (ci passo sopra) */
+.LGAppToolbarAbstractIcon:hover {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo label Titoli sezioni verdi */
+.LG-Heading .LG-Heading-Text {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore righe label Titoli sezioni verdi */
+.LG-Heading {
+	border-bottom-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo scelta valori campi */
+.gwt-combo-box-option-cell, .gwt-combo-box-option-cell-loading {
+    background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo scelta valori campi hover */
+.gwt-combo-box-option-cell-highlighted, .cellListKeyboardSelectedItem, .cellListEvenItem:HOVER, .cellListOddItem:HOVER {
+    background-color:#2271b3 !important;
+    color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore barra di scorrimento pagina */
+.LG-ScrollPanel .jspDrag {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore label Titoli sezioni parte sotto per caricamento file */
+.UploadedFileTableWrapper .LG-Section-Header-Text {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore label documenti pdf */
+.LG-Anchor {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore label intestazione colonne tabella file (Pubblicazione,   Denomincazione File, ecc) */
+.LG-DataTableHeader {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore label contenuto colonne tabella file */
+.LG-DataTableWidget {
+    color: #2271b3;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Profilo -> colore icone in alto a destra */
+.LG-IconButton.primary {
+	color: #2271b3 !important;
+	background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icone in alto a destra hover (ci passo sopra) */
+.LG-IconButton.primary:hover {
+	color: #003148 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icona cestino in alto a destra */
+.LG-IconButton.tertiary, .LG-MultiIconButtonBase.tertiary {
+	color: #2271b3 !important;
+	background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icona cestino in alto a destra hover (ci passo sopra) */
+.LG-IconButton.tertiary:hover, .LG-MultiIconButtonBase.tertiary {
+	color: #003148 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Profilo -> colore sfondo testo "Modifica password" */
+.LG-main-toolbar-popup {
+    background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Profilo -> colore sfondo testo "Modifica password"  hover*/
+.LG-main-toolbar-dropdown-menu-item:hover {
+    background-color: #2271b3 !important;
+	color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore bordo riquadro cambio password */
+.BW-ChangePassword-Dialog {
+	color: #2271b3 !important;
+	border-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icona X riquadro cambio password */
+.LG-Dialog-Caption .Dialog-Close-Button {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore sfondo pagina lato destro */
+#main-app-wrapper #app-content-wrapper {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Annunci -> colore testo label "Spazio di lavoro" */
+.bWHeaderWrapper {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Annunci -> colore riga sotto testo "Spazio di lavoro" */
+.bWHeaderWrapper .bWHeaderBottomLine {
+    background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Annunci -> colore sfondo in "testo conta caratteri" */
+.ChatPanel .ChatPanel-Counter {
+    background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Annunci -> colore sfondo parte inferiore Spazio di lavoro " */
+.ChatPanel {
+    background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore finestra login */
+.color-green.LG-DecoratedPanel>.LG-DecoratedPanel-content {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore icona X finestra login */
+.color-green.LG-DecoratedPanel .LG-DecoratedPanel-closeBtn {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Annunci -> colore testo in alto "I vostri annunci di lavoro" */
+.BewerberMaskLayout-headerTextLabel {
+	color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore finestra messaggio "Loga3 viene aperto su un'altra scheda" (sessione scaduta) */
+.LG-PopupMessage {
+    background-color: #ffffff;
+    border-color: #2271b3;
+}
+
+/* MTFBS 03102024 */
+/* colore bottone "OK" finestra messaggio "Loga3 viene aperto su un'altra scheda" (sessione scaduta) */
+.LG-PopupMessage .LG-PopupMessage-Footer .AcceptButton {
+    background-color: #2271b3;
+}
+
+/* MTFBS 03102024 */
+/* colore finestra messaggio "Abbandonare modifiche" */
+.LG-DialogBox {
+    background-color: #ffffff;
+    border-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo finestra messaggio "Abbandonare modifiche" */
+.LG-DialogLayoutHeaderLabel {
+    color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo tendina scelta lingua */
+.LG-Button.secondary {
+    background-color: #2271b3;
+    color: #ffffff;
+}
+
+/* MTFBS 03102024 */
+/* colore testo combo box lingue */
+.MultiControlPopup .MultiControlPopup-ContentPanel .MultiControlPopup-row, .MultiControlPopup .MultiControlPopup-ContentPanel .MultiControlPopupGrouChild-row {
+    color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore testo combo box lingue hover */
+.LG-Button.secondary.LG-Button-up-hovering {
+    background-color: #2271b3 !important;
+    color: #ffffff;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Altre offerte -> colore sfondo icona ricerca */
+.LG-IconButton.ic-link-selected, .LG-MultiIconButtonBase.ic-link-selected {
+    background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Altre offerte -> colore testo "Nessuna posizione soddisfa..." */
+.Bewerber-Web-Common-Heading {
+	    color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* colore bordo calendario in campo data  */
+.color-darkgray.LG-DecoratedPanel>.LG-DecoratedPanel-content, .color-darkgray.LG-DecoratedPanel .LG-DecoratedPanel-triangle {
+	background-color: #2271b3 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Mio profilo -> colore icone tabella Documenti */
+.LGDataTableDetailPanel-header-buttons-container {
+    background-color: #2271b3;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Mio profilo -> colore icone tabella Documenti sfumatura */
+.LGDataTableDetailPanel-header-buttons-gradient {
+    background-color: #ebf0f2 !important;
+}
+
+/* MTFBS 03102024 */
+/* Pagina Mio profilo -> colore icone tabella Documenti sfumatura */
+.LGDataTableDetailPanel-header-buttons-gradient-innerPart {
+    box-shadow: 0 0 31px 21px #2271b3;
 }
