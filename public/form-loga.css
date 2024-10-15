@@ -5,15 +5,13 @@
 label {font-weight: bold !important; color: #333 !important; font-size: 13px !important; font-family: Verdana,Geneva,sans-serif !important;}
 .DynaCss-AAA72-FIRMA-ID .LG-InputLabel .requiredSuffix, label .requiredSuffix {color:#bf0831}
 .DynaCss-100-FIRMA-ID .LG-InputLabel .requiredSuffix, label .requiredSuffix {color:#bf0831}
+.DynaCss-100-FIRMA-ID .LG-TextArea.required, .DynaCss-AAA72-FIRMA-ID .LG-TextArea.required {background-color: #f5f5f5 !important; border-color: transparent !important; border-left-color: transparent !important;}
 input, .LG-FileController {background-color: #fff !important; border: 1px solid #d4d4d4 !important; margin-bottom:6px !important}
-.LG-FileController-Edit {background-color: #fff !important; border-color:transparent !important;}
-.LG-FileController-MainPanel {margin-top:-13px}
-.LG-RichTextContent {
-  display: none;
-}
-.BW-WebPositionPage {
-  padding-bottom: 120px;
-}
+.LG-FileController-Edit {background-color: #f5f5f5 !important; border-color:transparent !important;}
+.LG-FileController-MainPanel {margin-top:0}
+.BW-WebPositionPage .LG-RichTextContent {display: none: /* Nascondi se è figlio di BW-WebPositionPage */}
+.BW-UserJobOfferDetailScreen-scrollPanelltem .LG-RichTextContent{display: block: / Lascia visibile se è figlio di 8W-User)obOfferDetailScreen-scroliPanelltem}
+.BW-WebPositionPage {padding-bottom: 120px;}
 
 /* MTFBS 03102024 -  colore sfondo campi input dati per candidarsi (Nome, Cognome, ecc...) */
 input,
