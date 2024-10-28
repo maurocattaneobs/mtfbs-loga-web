@@ -1,10 +1,7 @@
 const { DOMParser } = require("xmldom");
-import appConfig from "./config";
 const cheerio = require("cheerio");
 
-export async function fetchJobs() {
-  const remoteUrl = `${appConfig.logaUrl}`;
-
+export async function fetchJobs(remoteUrl) {
   const response = await fetch(remoteUrl);
 
   const xmlData = await response.text();
