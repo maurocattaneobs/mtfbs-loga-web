@@ -1,13 +1,11 @@
 import Link from "next/link";
 
-const ApplyJobModalContent = ({ job, language }) => {
+const ApplyJobModalContent = ({ job }) => {
   return (
     <div>
       <iframe
         className="resize"
-        src={
-          language === "DS" ? job?.url.repace("lang=IS", "lang=DS") : job?.url
-        }
+        src={job?.url}
         width="100%"
         height={"511px"}
       ></iframe>

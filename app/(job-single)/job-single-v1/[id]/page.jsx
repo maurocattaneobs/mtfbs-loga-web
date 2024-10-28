@@ -98,22 +98,9 @@ export default function DetailPage({ params }) {
                     href="#"
                     className="theme-btn btn-style-one"
                     data-bs-toggle="modal"
-                    data-bs-target="#applyJobModal-IS"
+                    data-bs-target="#applyJobModal"
                   >
-                    Invia candidatura IS
-                  </a>
-                  <button className="bookmark-btn">
-                    <i className="flaticon-bookmark"></i>
-                  </button>
-                </div>
-                <div className="btn-box">
-                  <a
-                    href="#"
-                    className="theme-btn btn-style-one"
-                    data-bs-toggle="modal"
-                    data-bs-target="#applyJobModal-DS"
-                  >
-                    Invia candidatura DS
+                    Invia candidatura
                   </a>
                   <button className="bookmark-btn">
                     <i className="flaticon-bookmark"></i>
@@ -124,14 +111,14 @@ export default function DetailPage({ params }) {
                 {/* <!-- Modal IS --> */}
                 <div
                   className="modal fade"
-                  id="applyJobModal-IS"
+                  id="applyJobModal"
                   tabIndex="-1"
                   aria-hidden="true"
                 >
                   <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div className="apply-modal-content modal-content">
                       <div className="text-center">
-                        <h3 className="title">Invia candidatura IS</h3>
+                        <h3 className="title">Invia candidatura</h3>
                         <button
                           type="button"
                           className="closed-modal"
@@ -141,35 +128,7 @@ export default function DetailPage({ params }) {
                       </div>
                       {/* End modal-header */}
 
-                      <ApplyJobModalContent job={(job, "IS")} />
-                      {/* End PrivateMessageBox */}
-                    </div>
-                    {/* End .send-private-message-wrapper */}
-                  </div>
-                </div>
-                {/* End .modal */}
-
-                {/* <!-- Modal DS --> */}
-                <div
-                  className="modal fade"
-                  id="applyJobModal-DS"
-                  tabIndex="-1"
-                  aria-hidden="true"
-                >
-                  <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div className="apply-modal-content modal-content">
-                      <div className="text-center">
-                        <h3 className="title">Invia candidatura DS</h3>
-                        <button
-                          type="button"
-                          className="closed-modal"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      {/* End modal-header */}
-
-                      <ApplyJobModalContent job={(job, "DS")} />
+                      <ApplyJobModalContent job={job} />
                       {/* End PrivateMessageBox */}
                     </div>
                     {/* End .send-private-message-wrapper */}
