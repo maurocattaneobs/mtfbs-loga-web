@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: { index: string } }
 ) {
   const remoteUrl_IS = `${appConfig.logaUrl_IS}`;
   const jobs_IS = await fetchJobs(remoteUrl_IS);
@@ -15,6 +15,11 @@ export async function GET(
 
   let jobs = jobs_IS.concat(jobs_DS);
 
-  const job = jobs.find((item) => item.id == params.id);
+  jobs = jobs.map((item, index) => {
+    item.index = index;
+    return item;
+  });
+
+  const job = jobs.find((item) => item.index == params.index);
   return Response.json(job);
 }

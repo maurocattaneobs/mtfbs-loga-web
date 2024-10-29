@@ -40,6 +40,7 @@ export async function fetchJobs(remoteUrl) {
     let plainText = $.text();
 
     return {
+      index,
       id,
       referenceNumber,
       title,
