@@ -11,13 +11,13 @@ import ApplyJobModalContent from "../../../../components/job-single-pages/shared
 import Image from "next/image";
 
 export default function DetailPage({ params }) {
-  const id = params.id;
+  const index = params.index;
 
   const [job, setJob] = useState(undefined);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`/api/jobs/${id}`, {
+      const response = await fetch(`/api/jobs/${index}`, {
         method: "GET",
         headers: {
           "Cache-Control": "no-cache",
