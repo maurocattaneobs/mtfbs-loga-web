@@ -11,10 +11,9 @@ export async function GET() {
 
   let jobs = jobs_IS.concat(jobs_DS);
 
-  jobs = jobs.map((item, index) => {
-    item.index = index;
-    return item;
+  let results = jobs.map((item, index) => {
+    return { ...item, index: index };
   });
 
-  return Response.json(jobs);
+  return Response.json(results);
 }
