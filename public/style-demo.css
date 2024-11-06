@@ -818,3 +818,7 @@ label {
 .LGDataTableDetailPanel-header-buttons-gradient-innerPart {
   box-shadow: 0 0 31px 21px #2271b3;
 }
+
+div[data-id="BWSCRPBLPOS"] {
+  display: none;
+}
