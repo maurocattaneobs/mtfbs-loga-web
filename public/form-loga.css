@@ -1,5 +1,7 @@
-/*Versione 1.0**/
+/*Versione 1.1 (151124)**/
+ 
 
+div[data-id="BWSCRPBLPOS"] {display: none;}
 .LG-Button.primary {background-color:#bf0831 !important; border: 1px solid #bf0831; border-radius:30px; font-family: Verdana,Geneva,sans-serif; letter-spacing: 0}
 .LG-Button.primary:hover {background-color:#ed3042 !important;}
 label {font-weight: bold !important; color: #333 !important; font-size: 13px !important; font-family: Verdana,Geneva,sans-serif !important;}
