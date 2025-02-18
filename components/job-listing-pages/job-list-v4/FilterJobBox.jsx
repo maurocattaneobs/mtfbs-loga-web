@@ -52,11 +52,13 @@ const FilterJobBox = ({ jobs }) => {
           </ul>
           {/* End .job-other-info */}
 
-          <button className="bookmark-btn">
-            <Link target="_blank" href={`${item.longtext1}`}>
-              <span className="flaticon-download"> </span>
-            </Link>
-          </button>
+          <a
+            href={`${item.longtext1}`}
+            target="_blank"
+            className="theme-btn btn-style-three bg-blue"
+          >
+            <span className="btn-title">Apri il formulario</span>
+          </a>
         </div>
       </div>
     </div>
