@@ -54,7 +54,9 @@ const FilterJobBox = ({ jobs }) => {
 
           <button className="bookmark-btn">
             <span className="flaticon-bookmark">
-              <Link target="_blank" href={`${item.longtext1}`}></Link>
+              <Link target="_blank" href={`${item.longtext1}`}>
+                test
+              </Link>
             </span>
           </button>
         </div>
