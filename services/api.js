@@ -31,6 +31,8 @@ export async function fetchJobs(remoteUrl) {
       jobNode.getElementsByTagName("publishToDate")[0]?.textContent || "";
     const content =
       jobNode.getElementsByTagName("content")[0]?.textContent || "";
+    const longtext1 =
+      jobNode.getElementsByTagName("longtext1")[0]?.textContent || "";
 
     const hrConsultantsArr = hrConsultant.split(", ");
 
@@ -53,6 +55,7 @@ export async function fetchJobs(remoteUrl) {
       publishToDate,
       hrConsultantsArr,
       content,
+      longtext1,
       contentSenzaFontFamily,
       plainText,
     };

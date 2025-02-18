@@ -6,4 +6,5 @@ export type Job = {
   country: string;
   hrConsultant: string;
   plainText: string;
+  longtext1: string;
 };
