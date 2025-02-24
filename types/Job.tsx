@@ -7,4 +7,5 @@ export type Job = {
   hrConsultant: string;
   plainText: string;
   longtext1: string;
+  file1: string;
 };

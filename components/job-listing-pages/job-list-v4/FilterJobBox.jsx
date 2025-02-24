@@ -53,8 +53,9 @@ const FilterJobBox = ({ jobs }) => {
           {/* End .job-other-info */}
 
           <a
-            href={`${item.longtext1}`}
+            href={`data:application/pdf;base64,${item.file1}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="theme-btn btn-style-three bg-blue"
           >
             <span className="btn-title">Apri il formulario</span>
