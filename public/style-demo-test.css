@@ -826,9 +826,6 @@ div[data-id="BWSCRPBLPOS"] {
 .LG-Section.LG-MaskDataTable.Bewerber-Scroll-Table.LG-Section-open.Bewerber-Content-Table {
   display: none !important;
 }
-.LG-Button.tertiary.LG-Button-up {
-  display: none !important;
-}
 .LG-IconButton.tertiary.LG-Icon.ic-search.ic-small.ic-nopadding.ic-link-hover {
   display: none !important;
 }
@@ -836,5 +833,8 @@ div[data-id="BWSCRPBLPOS"] {
   display: none !important;
 }
 .Bewerber-Web-Common-Info {
+  display: none !important;
+}
+.LG-MultiControl {
   display: none !important;
 }
