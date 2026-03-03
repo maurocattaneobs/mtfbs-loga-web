@@ -235,18 +235,31 @@ label {
 
 /* MTFBS 03.03.26 Modifiche css per nascondere tutto tranne bottone accedi e centrare bottone */
 .LG-Section, .LG-IconButton {
-	display: none;
+  display: none;
 }
-.BW-Header {
-    text-align: center !important;
+
+/* forza header "neutro" */
+.BW-Header{
+  text-align: center !important;
 }
+
+/* IMPORTANTISSIMO: annulla i float dei figli diretti dell'header */
+.BW-Header > *{
+  float: none !important;
+}
+
 /* Bottone Accedi */
-.BW-Header .b3LoginButtonId {
-    float: none !important;
-    display: block !important;
-    width: fit-content !important;   /* largo solo quanto contenuto */
-    margin: 200px auto 0 auto !important;  /* centro orizzontalmente */
+.BW-Header .b3LoginButtonId{
+  float: none !important;
+  display: inline-block !important;     /* torna inline-block */
+  width: auto !important;
+  margin: 200px auto 0 auto !important; /* top + centratura */
+  position: relative !important;        /* evita effetti strani */
+  left: auto !important;
+  right: auto !important;
 }
-.BW-Header .b3LoginButtonId .ic-user {
-    font-size: 22px !important;
+
+/* Testo + icona */
+.BW-Header .b3LoginButtonId .ic-user{
+  font-size: 22px !important;
 }
