@@ -240,7 +240,15 @@ label {
 .BW-Header {
     text-align: center;
 }
+/* Bottone Accedi */
 .BW-Header .b3LoginButtonId {
-    float: none !important;
-    display: inline-block;
+    float: none !important;           /* rimuove il float right inline */
+    display: block !important;        /* lo rende centrabile */
+    margin: 200px auto 0 auto !important; /* 200px sopra + centrato */
+    min-width: 220px;                 /* più largo */
+    padding: 18px 30px;               /* più alto */
+    font-size: 22px;                  /* font più grande */
+}
+.BW-Header .b3LoginButtonId .ic-user {
+    font-size: 22px !important; /* Ingrandisce anche il testo interno */
 }
