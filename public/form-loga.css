@@ -232,3 +232,15 @@ label {
     border-color: #f5f5f5 !important;
     border-left-color: #f5f5f5 !important;
 }
+
+/* MTFBS 03.03.26 Modifiche css per nascondere tutto tranne bottone accedi e centrare bottone */
+.LG-Section, .LG-IconButton {
+	display: none;
+}
+.BW-Header {
+    text-align: center;
+}
+.BW-Header .b3LoginButtonId {
+    float: none !important;
+    display: inline-block;
+}
