@@ -253,7 +253,7 @@ label {
   float: none !important;
   display: inline-block !important;     /* torna inline-block */
   width: auto !important;
-  margin: 200px auto 0 auto !important; /* top + centratura */
+  margin: 100px auto 0 auto !important; /* top + centratura */
   position: relative !important;        /* evita effetti strani */
   left: auto !important;
   right: auto !important;
