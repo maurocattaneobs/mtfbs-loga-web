@@ -242,12 +242,10 @@ label {
 }
 /* Bottone Accedi */
 .BW-Header .b3LoginButtonId {
-    float: none !important;        /* rimuove float right */
-    display: inline-block !important;
-    width: auto !important;
-    margin-top: 200px !important;
-    padding: 18px 28px;            /* aumenta dimensione */
-    font-size: 22px;               /* testo più grande */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 28px !important;
 }
 .BW-Header .b3LoginButtonId .ic-user {
     font-size: 22px !important;
