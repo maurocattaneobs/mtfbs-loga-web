@@ -238,17 +238,17 @@ label {
 	display: none;
 }
 .BW-Header {
-    text-align: center;
+    text-align: center !important;
 }
 /* Bottone Accedi */
 .BW-Header .b3LoginButtonId {
-    float: none !important;           /* rimuove il float right inline */
-    display: block !important;        /* lo rende centrabile */
-    margin: 200px auto 0 auto !important; /* 200px sopra + centrato */
-    min-width: 220px;                 /* più largo */
-    padding: 18px 30px;               /* più alto */
-    font-size: 22px;                  /* font più grande */
+    float: none !important;        /* rimuove float right */
+    display: inline-block !important;
+    width: auto !important;
+    margin-top: 200px !important;
+    padding: 18px 28px;            /* aumenta dimensione */
+    font-size: 22px;               /* testo più grande */
 }
 .BW-Header .b3LoginButtonId .ic-user {
-    font-size: 22px !important; /* Ingrandisce anche il testo interno */
+    font-size: 22px !important;
 }
