@@ -235,11 +235,43 @@ label {
 
 
 /* MTFBS 17032026 - nascondere tutto da invio candidatura a parte bottone "Accedi" */
-#LGScrollPanel1 * {
-    visibility: hidden;
+/* Nasconde tutti i figli diretti */
+#LGScrollPanel1 > * {
+    display: none !important;
 }
 
-#LGScrollPanel1 [data-uin="btn-user"],
+/* Mostra il contenuto (serve per mantenere la struttura) */
+#LGScrollPanel1 .LG-ScrollPanel-Content {
+    display: block !important;
+}
+
+/* Continua a scendere nella gerarchia */
+#LGScrollPanel1 .BW-MainPanel,
+#LGScrollPanel1 .BW-PositionsScreen {
+    display: block !important;
+}
+
+/* Nasconde tutto dentro PositionsScreen */
+#LGScrollPanel1 .BW-PositionsScreen > * {
+    display: none !important;
+}
+
+/* Mostra SOLO il blocco che contiene il bottone */
+#LGScrollPanel1 .BW-PositionsScreen > div:first-child {
+    display: block !important;
+}
+
+/* Nasconde tutto dentro quel blocco */
+#LGScrollPanel1 .BW-PositionsScreen > div:first-child > * {
+    display: none !important;
+}
+
+/* Mostra SOLO il bottone ACCEDI */
+#LGScrollPanel1 [data-uin="btn-user"] {
+    display: block !important;
+}
+
+/* Mostra il contenuto interno del bottone */
 #LGScrollPanel1 [data-uin="btn-user"] * {
-    visibility: visible;
+    display: inline-block !important;
 }
