@@ -241,6 +241,9 @@ span.LG-IconButton.ic-orderedlist[data-uin="ic-orderedlist"] {
 div.LG-Button.tertiary.b3LoginButtonId.LG-Button-up[data-uin="btn-user"] {
     float: left !important;
 }
+span.LG-IconButton.ic-search.ic-small {
+    display: none !important;
+}
 div[data-uin="btn-user"],
 div[data-uin="btn-user"]:hover,
 div[data-uin="btn-user"].LG-Button-up,
@@ -253,4 +256,8 @@ div[data-uin="btn-user"].LG-Button-down {
 }
 .BWeb-Responsive-Wrapper-Widget {
     display: none !important;
+}
+.LG-MaskDataTable-Content {
+    width: 100%;
+    display: none;
 }
