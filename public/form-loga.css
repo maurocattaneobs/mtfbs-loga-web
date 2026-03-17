@@ -236,7 +236,8 @@ label {
 
 /* MTFBS 17032026 - nascondere tutto da invio candidatura a parte bottone "Accedi" */
 span.LG-IconButton.ic-orderedlist[data-uin="ic-orderedlist"] {
-    display: none !important;
+    /*display: none !important;*/
+    border: red 1px solid !important;
 }
 div.LG-Button.tertiary.b3LoginButtonId.LG-Button-up[data-uin="btn-user"] {
     float: left !important;
