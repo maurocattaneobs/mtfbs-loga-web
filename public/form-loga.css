@@ -238,6 +238,9 @@ label {
 span.LG-IconButton.ic-orderedlist[data-uin="ic-orderedlist"] {
     display: none !important;
 }
+div.LG-Button.tertiary.b3LoginButtonId.LG-Button-up[data-uin="btn-user"] {
+    float: left !important;
+}
 .LG-SearchBox-Wrapper {
     display: none !important;
 }
