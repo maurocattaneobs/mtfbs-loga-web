@@ -235,11 +235,11 @@ label {
 
 
 /* MTFBS 17032026 - nascondere tutto da invio candidatura a parte bottone "Accedi" */
-#LGScrollPanel1 > * {
-    display: none !important;
+#LGScrollPanel1 * {
+    visibility: hidden;
 }
 
 #LGScrollPanel1 [data-uin="btn-user"],
 #LGScrollPanel1 [data-uin="btn-user"] * {
-    display: inline-block !important;
+    visibility: visible;
 }
