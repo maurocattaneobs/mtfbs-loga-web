@@ -233,3 +233,13 @@ label {
     border-left-color: #f5f5f5 !important;
 }
 
+
+/* MTFBS 17032026 - nascondere tutto da invio candidatura a parte bottone "Accedi" */
+#LGScrollPanel1 > * {
+    display: none !important;
+}
+
+#LGScrollPanel1 [data-uin="btn-user"],
+#LGScrollPanel1 [data-uin="btn-user"] * {
+    display: inline-block !important;
+}
