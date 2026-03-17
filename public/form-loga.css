@@ -235,3 +235,12 @@ label {
 
 
 /* MTFBS 17032026 - nascondere tutto da invio candidatura a parte bottone "Accedi" */
+.LG-IconButton.tertiary, .LG-MultiIconButtonBase.tertiary {
+    display: none !important;
+}
+.LG-SearchBox-Wrapper {
+    display: none !important;
+}
+.BWeb-Responsive-Wrapper-Widget {
+    display: none !important;
+}
