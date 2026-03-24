@@ -355,16 +355,29 @@ div[data-uin="btn-user"].LG-Button-down {
   display: none !important;
 }
 
+/* Nasconde SOLO la tabella delle posizioni aperte */
 .BW-PositionsScreen
   .Bewerber-Content-Table-Holder-Web
-  div.LG-MaskDataTable-Content:has(
-    > .LG-DataTableWidget table.LG-CollapsibleScrollDataTable-MainTable
-  ) {
+  > table.LG-Section.BGewerber-Scroll-Table,
+.BW-PositionsScreen
+  .Bewerber-Content-Table-Holder-Web
+  > table.LG-Section.Bewerber-Scroll-Table,
+.BW-PositionsScreen
+  .Bewerber-Content-Table-Holder-Web
+  > table.Bewerber-Scroll-Table {
   display: none !important;
 }
 
+/* Nasconde SOLO il blocco finale testo */
+.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web > div + div .gwt-HTML {
+  display: none !important;
+}
+
+/* Nasconde SOLO il link sotto al testo */
 .BW-PositionsScreen
   .Bewerber-Content-Table-Holder-Web
-  div:has(> .gwt-HTML + .Bewerber-Web-Common-Info) {
+  > div
+  + div
+  .Bewerber-Web-Common-Info {
   display: none !important;
 }
