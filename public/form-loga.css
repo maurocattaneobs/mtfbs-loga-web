@@ -261,18 +261,7 @@ div.LG-MaskDataTable-Content:has(table.LG-CollapsibleScrollDataTable-MainTable) 
     display: none !important;
 }
 
-/* Nasconde il blocco testo */
-.BW-PositionsScreen 
-.Bewerber-Content-Table-Holder-Web 
-.LG-ScrollPanel 
-.gwt-HTML {
-    display: none !important;
-}
-
-/* Nasconde il link sotto (candidatura spontanea) */
-.BW-PositionsScreen 
-.Bewerber-Content-Table-Holder-Web 
-.LG-ScrollPanel 
-.Bewerber-Web-Common-Info {
+.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .gwt-HTML,
+.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .Bewerber-Web-Common-Info {
     display: none !important;
 }
