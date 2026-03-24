@@ -260,3 +260,8 @@ div[data-uin="btn-user"].LG-Button-down {
 div.LG-MaskDataTable-Content:has(table.LG-CollapsibleScrollDataTable-MainTable) {
     display: none !important;
 }
+
+.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .LG-DataTable-Footer + div + div > div > .gwt-HTML,
+.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .LG-DataTable-Footer + div + div > div > .Bewerber-Web-Common-Info {
+    display: none !important;
+}
