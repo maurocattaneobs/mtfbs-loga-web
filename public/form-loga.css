@@ -261,7 +261,7 @@ div.LG-MaskDataTable-Content:has(table.LG-CollapsibleScrollDataTable-MainTable) 
     display: none !important;
 }
 
-.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .gwt-HTML,
-.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .Bewerber-Web-Common-Info {
+.BW-PositionsScreen .gwt-HTML,
+.BW-PositionsScreen .Bewerber-Web-Common-Info {
     display: none !important;
 }
