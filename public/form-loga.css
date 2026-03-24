@@ -355,14 +355,16 @@ div[data-uin="btn-user"].LG-Button-down {
   display: none !important;
 }
 
-/* IMPORTANTE: lascia visibile la tabella */
-div.LG-MaskDataTable-Content:has(
-    table.LG-CollapsibleScrollDataTable-MainTable
+.BW-PositionsScreen
+  .Bewerber-Content-Table-Holder-Web
+  div.LG-MaskDataTable-Content:has(
+    > .LG-DataTableWidget table.LG-CollapsibleScrollDataTable-MainTable
   ) {
-  display: block !important;
+  display: none !important;
 }
 
-/* Nasconde solo il blocco finale testo + link sotto la tabella */
-.BW-PositionsScreen div:has(> .gwt-HTML + .Bewerber-Web-Common-Info) {
+.BW-PositionsScreen
+  .Bewerber-Content-Table-Holder-Web
+  div:has(> .gwt-HTML + .Bewerber-Web-Common-Info) {
   display: none !important;
 }
