@@ -261,7 +261,12 @@ div.LG-MaskDataTable-Content:has(table.LG-CollapsibleScrollDataTable-MainTable) 
     display: none !important;
 }
 
-.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .LG-DataTable-Footer + div + div > div > .gwt-HTML,
-.BW-PositionsScreen .Bewerber-Content-Table-Holder-Web .LG-DataTable-Footer + div + div > div > .Bewerber-Web-Common-Info {
+/* Nasconde solo il blocco descrittivo finale sotto la tabella offerte */
+.BW-PositionsScreen .LG-DataTable-Footer + div + div > div > .gwt-HTML {
+    display: none !important;
+}
+
+/* Nasconde solo il link associato a quel blocco */
+.BW-PositionsScreen .LG-DataTable-Footer + div + div > div > .Bewerber-Web-Common-Info {
     display: none !important;
 }
