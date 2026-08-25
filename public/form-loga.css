@@ -1,7 +1,86 @@
-/* Versione Unificata 2.0 — Merge di v1.1 + v1.3 + v1.4 */
+/* ============================================================
+   BewerberWeb — tema "BPS (SUISSE)" — Versione Unificata 3.0
+   Merge di:
+     - Unificata 2.0 (v1.1 + v1.3 + v1.4)   -> layer GWT / LG-*
+     - bps-theme (token da bps-suisse.ch)   -> layer React / b3wreact
+   Da caricare come CSS dinamico del portale (viene iniettato
+   dopo i CSS dell'applicazione).
+
+   Palette BPS (misurata su bps-suisse.ch):
+     rosso   #BF0831   hover #ED3042   scuro #8F0524
+     inchiostro #003148 (hover icone)
+     testo   #333 / #000    superfici #FFF / #F5F5F5
+     font    Verdana, Geneva, sans-serif
+   ============================================================ */
 
 /* ============================================================
-   RIMOZIONE ELEMENTI (Display None)
+   0. TOKEN
+   I token verdi dell'app vengono rimappati sul rosso BPS:
+   coprono da soli la maggior parte del layer React.
+   !important necessario: il bundle React inietta un <style>
+   proprio dopo i link CSS e a pari specificita' vincerebbe lui.
+   ============================================================ */
+:root {
+    /* --- brand BPS --- */
+    --bps-red: #bf0831;
+    --bps-red-hover: #ed3042;
+    --bps-red-dark: #8f0524;
+    --bps-ink: #003148;
+    --bps-text: #333;
+    --bps-surface: #fff;
+    --bps-surface-alt: #f5f5f5;
+    --bps-tint: #fdf2f4;
+    --bps-font: Verdana, Geneva, sans-serif;
+    --bps-pill: 30px;
+
+    /* --- rimappatura token BewerberWeb (verde -> rosso BPS) --- */
+    --green: #bf0831 !important;
+    --dark-green: #8f0524 !important;
+    --main-green-color: #bf0831 !important;
+    --main-green-lighten-color: #ed3042 !important;
+    --l3l-main-green-color: #bf0831 !important;
+
+    --color1: #f5f5f5 !important;
+    --color2: #f5f5f5 !important;
+    --secondary-color: #f5f5f5 !important;
+    --primary-color-opacity: #fdf2f4 !important;
+    --white-shade: #fff !important;
+
+    --link-color: #bf0831 !important;
+    --red: #c1002d !important;
+
+    /* grigi */
+    --light-grey-1: #f6f6f6 !important;
+    --light-grey-2: #fafafa !important;
+    --light-grey-3: #e5e5e5 !important;
+    --light-grey-4: #efefef !important;
+    --light-grey-5: #eaeaea !important;
+    --grey: #ddd !important;
+    --dark-grey: #545358 !important;
+    --dark-grey-2: #727272 !important;
+
+    --pilled-shape-radius: 30px !important;
+
+    /* input / campi obbligatori */
+    --l3-old-login-background-input-field-color: #f5f5f5 !important;
+    --lg-inputs-required-bgnd: #fdf2f4 !important;
+
+    /* tema mtfbs / loga-form.css */
+    --mtfbs-primary-color: #bf0831 !important;
+    --mtfbs-input-color: #333 !important;
+    --mtfbs-input-border-color: #ddd !important;
+    --mtfbs-input-background-color: #f5f5f5 !important;
+
+    /* librerie di terze parti */
+    --toastify-color-error: #bf0831;
+    --toastify-color-progress-light: #bf0831;
+    --rt-color-dark: #333;
+    --rt-color-error: #bf0831;
+    --rt-color-info: #bf0831;
+}
+
+/* ============================================================
+   1. RIMOZIONE ELEMENTI (Display None)
    ============================================================ */
 div[data-id="BWSCRPBLPOS"],
 .LG-SearchBox-Wrapper,
@@ -33,7 +112,7 @@ div.LG-MaskDataTable-Content:has(table.LG-CollapsibleScrollDataTable-MainTable) 
 }
 
 /* ============================================================
-   LAYOUT E POSIZIONAMENTO
+   2. LAYOUT E POSIZIONAMENTO
    ============================================================ */
 .BW-WebPositionPage {
     padding-bottom: 120px;
@@ -51,11 +130,17 @@ div.LG-Button.tertiary.b3LoginButtonId.LG-Button-up[data-uin="btn-user"] {
 }
 
 /* ============================================================
-   TIPOGRAFIA E COLORI GENERALI
+   3. TIPOGRAFIA E COLORI GENERALI
    ============================================================ */
 .BW-WebPositionDetailScreen,
 label,
-.LG-Button.primary {
+.LG-Button.primary,
+body,
+button,
+input,
+select,
+textarea,
+.b3w-hr-profile-app {
     font-family: Verdana, Geneva, sans-serif !important;
 }
 
@@ -65,8 +150,35 @@ label {
     font-size: 13px !important;
 }
 
+h1, h2, h3, h4 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+a {
+    color: #bf0831;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8f0524;
+    text-decoration: underline;
+}
+
+::selection {
+    background: #bf0831;
+    color: #fff;
+}
+
+/* focus visibile coerente (accessibilita') */
+:focus-visible {
+    outline: 2px solid #bf0831;
+    outline-offset: 2px;
+}
+
 /* ============================================================
-   BOTTONI PRIMARI
+   4. BOTTONI PRIMARI
    ============================================================ */
 .LG-Button.primary {
     background-color: #bf0831 !important;
@@ -81,8 +193,53 @@ label {
     color: #ffffff !important;
 }
 
+/* Bottoni del layer React (login / registrazione) */
+.btn-login,
+.btn-register,
+button.primary,
+.btn-primary {
+    background-color: #bf0831;
+    border: 1px solid #bf0831;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.btn-login:hover,
+.btn-register:hover,
+button.primary:hover,
+.btn-primary:hover {
+    background-color: #ed3042;
+    border-color: #ed3042;
+    color: #fff;
+    opacity: 1;
+}
+
+/* CTA secondario in stile BPS: outline, riempimento all'hover */
+.btn-secondary,
+button.secondary,
+.actions.ka-login-link {
+    background: transparent;
+    border: 1px solid #bf0831;
+    border-radius: 30px;
+    color: #bf0831;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-secondary:hover,
+button.secondary:hover,
+.actions.ka-login-link:hover {
+    background: #bf0831;
+    color: #fff;
+    text-decoration: none;
+}
+
 /* ============================================================
-   BOTTONI SECONDARI (Lingua, ecc.)
+   5. BOTTONI SECONDARI (Lingua, ecc.)
    ============================================================ */
 .LG-Button.secondary {
     background-color: #bf0831 !important;
@@ -95,7 +252,7 @@ label {
 }
 
 /* ============================================================
-   ICONE BOTTONE (Primary / Tertiary)
+   6. ICONE BOTTONE (Primary / Tertiary)
    ============================================================ */
 .LG-IconButton.primary {
     color: #bf0831 !important;
@@ -124,7 +281,7 @@ label {
 }
 
 /* ============================================================
-   FORM E INPUT
+   7. FORM E INPUT
    ============================================================ */
 input,
 .LG-FileController {
@@ -184,8 +341,35 @@ input:focus {
     color: #bf0831 !important;
 }
 
+/* --- form del layer React --- */
+.pane-login-label {
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pane-login-input:focus,
+.ka-login .pane-login-input.ka-login-input:focus {
+    border-bottom-color: #bf0831;
+    outline: 2px solid #bf0831;
+    outline-offset: 1px;
+}
+
+/* campi obbligatori (verde hardcoded nel CSS dell'app) */
+.B3WHrTextboxRequired,
+.TextAreaField.mandatory {
+    background-color: #fdf2f4;
+    border: .5px solid #bf0831;
+}
+
+/* dropzone allegati */
+.bweb3-files-dropzone-container .bweb3-files-dropzone.drag-over {
+    background-color: rgba(191, 8, 49, .1);
+    border: 2px dashed rgba(191, 8, 49, .25);
+}
+
 /* ============================================================
-   SIDEBAR E NAVIGAZIONE
+   8. SIDEBAR E NAVIGAZIONE
    ============================================================ */
 .LGAppToolbar .MainContainer {
     background-color: #bf0831 !important;
@@ -201,8 +385,13 @@ input:focus {
     background-color: #ffffff !important;
 }
 
+/* sidebar dashboard (layer React) */
+.b3w-hr-profile-app .b3w-hr-dashboard-container .b3w-hr-dashboard-inner-container .b3w-hr-profile-app-dashboard-content-wrapper .sidebar {
+    background-color: #8f0524;
+}
+
 /* ============================================================
-   INTESTAZIONI E SEZIONI
+   9. INTESTAZIONI E SEZIONI
    ============================================================ */
 .LG-Heading .LG-Heading-Text,
 .UploadedFileTableWrapper .LG-Section-Header-Text,
@@ -217,15 +406,26 @@ input:focus {
     border-bottom-color: #bf0831 !important;
 }
 
+/* intestazioni del layer React (es. "CANDIDATURE") */
+.b3w-hr-popup-header-with-close-btn .b3w-hr-header-name,
+.b3w-hr-popup-header-with-close-btn .b3w-hr-header-buttons,
+.b3w-hr-header-container .b3w-hr-header-name {
+    color: #8f0524;
+}
+
 /* ============================================================
-   SCROLLBAR
+   10. SCROLLBAR
    ============================================================ */
 .LG-ScrollPanel .jspDrag {
     background-color: #bf0831 !important;
 }
 
+::-webkit-scrollbar-thumb {
+    background: #bf0831;
+}
+
 /* ============================================================
-   TOOLBAR UTENTE E MENU
+   11. TOOLBAR UTENTE E MENU
    ============================================================ */
 .LG-main-toolbar-popup {
     background-color: #ffffff !important;
@@ -237,14 +437,16 @@ input:focus {
 }
 
 /* ============================================================
-   SFONDO PAGINA
+   12. SFONDO PAGINA
    ============================================================ */
 #main-app-wrapper #app-content-wrapper {
     background-color: #bf0831 !important;
 }
 
+/* Nel layer React il body usa var(--green), gia' rimappata al punto 0. */
+
 /* ============================================================
-   PAGINA ANNUNCI (Spazio di Lavoro)
+   13. PAGINA ANNUNCI (Spazio di Lavoro)
    ============================================================ */
 .bWHeaderWrapper {
     color: #bf0831 !important;
@@ -267,8 +469,18 @@ input:focus {
     color: #bf0831 !important;
 }
 
+/* chat del layer React */
+.chatInputBox .chatInputBoxContainerRight {
+    background-color: #8f0524;
+}
+
+/* riquadro informativo (verde hardcoded con !important nell'app) */
+.b3w-hr-info {
+    background-color: #bf0831 !important;
+}
+
 /* ============================================================
-   POPUP E FINESTRE DI DIALOGO
+   14. POPUP E FINESTRE DI DIALOGO
    ============================================================ */
 .LG-PopupMessage,
 .LG-DialogBox {
@@ -285,8 +497,14 @@ input:focus {
     color: #bf0831 !important;
 }
 
+/* toast (react-toastify): il close-button restava verde */
+.Toastify__close-button,
+.Toastify__toast--success .Toastify__close-button {
+    color: #bf0831 !important;
+}
+
 /* ============================================================
-   CAMBIO PASSWORD
+   15. CAMBIO PASSWORD
    ============================================================ */
 .BW-ChangePassword-Dialog {
     color: #bf0831 !important;
@@ -298,7 +516,7 @@ input:focus {
 }
 
 /* ============================================================
-   LOGIN
+   16. LOGIN
    ============================================================ */
 .color-green.LG-DecoratedPanel > .LG-DecoratedPanel-content {
     background-color: #bf0831 !important;
@@ -308,16 +526,50 @@ input:focus {
     background-color: #bf0831 !important;
 }
 
+/* pannello login del layer React */
+.pane-login,
+.b3hr-profile-login-container .pane-login {
+    background: #fff;
+    border-top: 4px solid #bf0831;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+.b3w-hr-profile-app .b3hr-profile-login-container .item-container {
+    background: #8f0524;
+}
+
 /* ============================================================
-   CALENDARIO
+   17. CALENDARIO
    ============================================================ */
 .color-darkgray.LG-DecoratedPanel > .LG-DecoratedPanel-content,
 .color-darkgray.LG-DecoratedPanel .LG-DecoratedPanel-triangle {
     background-color: #bf0831 !important;
 }
 
+/* datepicker del layer React */
+.react-datepicker__header {
+    background-color: #bf0831;
+    border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: #fff;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+    background-color: #bf0831;
+    color: #fff;
+}
+
+.react-datepicker__day--selected:hover,
+.react-datepicker__day--keyboard-selected:hover {
+    background-color: #8f0524;
+}
+
 /* ============================================================
-   DOCUMENTI E PROFILO
+   18. DOCUMENTI E PROFILO
    ============================================================ */
 .LGDataTableDetailPanel-header-buttons-container {
     background-color: #bf0831 !important;
